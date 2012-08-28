@@ -6,8 +6,7 @@ Vagrant::Config.run do |config|
   end
 
   config.vm.forward_port 22, 2223
-  # Setting host name is currently only supported on Debian, Ubuntu and RedHat.
-  #config.vm.host_name = "cidar"
+  config.vm.network :hostonly, "10.0.3.20 "
 
   config.vm.customize [
     'modifyvm', :id,
