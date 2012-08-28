@@ -5,6 +5,7 @@ Vagrant::Config.run do |config|
     puppet.manifest_file = "dev.pp"
   end
 
+  config.vm.forward_port 22, 2223
   # Setting host name is currently only supported on Debian, Ubuntu and RedHat.
   #config.vm.host_name = "cidar"
 
