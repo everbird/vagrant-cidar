@@ -14,6 +14,6 @@ Vagrant::Config.run do |config|
   config.vm.customize [
     'modifyvm', :id,
     '--name', 'vagrant-cidar',
-    '--memory', '1536',
+    '--memory', '512',
   ]
 end
