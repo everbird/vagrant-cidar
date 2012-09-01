@@ -1,5 +1,5 @@
 Vagrant::Config.run do |config|
-  config.vm.box = "everbird-gentoo-64"
+  config.vm.box = "everbird-gentoo-64-i686-3.3.8"
   config.vm.provision :puppet, :module_path => "modules" do |puppet|
     puppet.manifests_path = "manifests"
     puppet.manifest_file = "dev.pp"
