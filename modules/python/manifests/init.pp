@@ -6,7 +6,11 @@ class python {
     ]:
       ensure => latest
   }
-  package_keywords { 'dev-python/virtualenvwrapper':
+  package_keywords { [
+    'dev-python/stevedore',
+    'dev-python/virtualenv-clone',
+    'dev-python/virtualenvwrapper',
+    ]:
     keywords    => ['~x86'],
     target      => 'puppet',
   }
