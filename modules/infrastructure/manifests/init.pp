@@ -4,7 +4,10 @@ class infrastructure() {
   #include memcache
   #include redis
 
-  package { 'app-misc/tmux':
+  package {[
+    'app-misc/tmux',
+    'sys-process/lsof',
+  ]:
     ensure => latest
   }
 }
