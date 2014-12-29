@@ -5,7 +5,7 @@ class infrastructure() {
   #include redis
 
   package {[
-    '=app-misc/tmux-1.8',
+    'app-misc/tmux',
     'sys-process/lsof',
     'dev-util/strace',
     'net-analyzer/ifstat',
