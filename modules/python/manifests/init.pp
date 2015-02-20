@@ -2,7 +2,6 @@ class python {
   package {[
     'dev-python/virtualenv',
     'dev-python/pip',
-    'dev-python/ipython',
     ]:
       ensure => latest
   }
