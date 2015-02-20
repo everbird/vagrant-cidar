@@ -10,8 +10,9 @@ class python {
     'dev-python/stevedore',
     'dev-python/virtualenv-clone',
     'dev-python/virtualenvwrapper',
+    'dev-python/pbr',
     ]:
-    keywords    => ['~x86'],
+    keywords    => ['~amd64'],
     target      => 'puppet',
   }
 

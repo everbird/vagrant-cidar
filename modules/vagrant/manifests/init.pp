@@ -1,7 +1,7 @@
 class vagrant() {
-  class { timezone:
-    zone => 'PRC',
-  }
+  #class { timezone:
+  #  zone => 'PRC',
+  #}
 
   file { '/home/vagrant/postinstall.sh':
     ensure => absent,

@@ -2,7 +2,8 @@ class local_repo($source = 'default') {
   $repo_conf = ""
 
   exec { 'sync-gentoo-portages':
-    command => 'emerge --sync',
+    #command => 'emerge --sync',
+    command => 'emerge-webrsync',
     timeout => 600,
   }
   Exec['sync-gentoo-portages'] -> Package <| |>
@@ -11,11 +12,11 @@ class local_repo($source = 'default') {
   package { 'app-portage/eix': ensure => latest }
   Package['sys-apps/portage'] -> Package['app-portage/eix']
 
-  exec { 'eix-update':
-    command => 'eix-update',
+  exec { 'eix-sync':
+    command => 'eix-sync',
     timeout => 600,
   }
-  Package['app-portage/eix'] -> Exec['eix-update']
+  Package['app-portage/eix'] -> Exec['eix-sync']
 
   package { 'app-portage/layman': ensure => latest }
 
