@@ -1,6 +1,3 @@
-[submodule "modules/gentoo"]
-	path = modules/gentoo
-	url = git://github.com/ramereth/puppet-gentoo.git
 [submodule "modules/concat"]
 	path = modules/concat
 	url = git://github.com/ripienaar/puppet-concat.git
