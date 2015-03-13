@@ -5,12 +5,13 @@ Vagrant.configure("2") do |config|
     puppet.manifest_file = "dev.pp"
   end
 
-  config.vm.network "private_network", ip: "10.0.3.20", auto_config: false
+  config.vm.network "private_network", type: "dhcp", auto_config: false
 
   # config.vm.synced_folder ".", "/vagrant", type: "nfs"
   # config.vm.synced_folder "/Users/everbird/code", "/home/everbird/code", type: "nfs"
   config.vm.synced_folder ".", "/vagrant"
-  config.vm.synced_folder "/Users/everbird/code", "/home/everbird/code"
+  config.vm.synced_folder "vm-store", "/vm-store"
+  config.vm.synced_folder "/Users/everbird/code", "/code"
 
   config.vm.provider "virtualbox" do |vb|
     vb.name = "vagrant-cidar"
