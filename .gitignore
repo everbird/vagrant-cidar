@@ -1,4 +1,4 @@
 *.swp
 *~
 .vagrant
-vm-vagrant-home
+vm-store
